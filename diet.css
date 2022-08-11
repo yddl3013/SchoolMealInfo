@@ -16,8 +16,9 @@
  
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
+    touch-action: pan-y;
 }
 
 .wrapper {
@@ -26,12 +27,13 @@ body {
     width: 320px;
     height: 400px;
     margin: auto;
+    margin-top: 25%;
     border: 1px solid black;
     border-radius: 16px;
 }
 
 .title {
-    background-color: #97d475;
+    background-color: #887972;
     height: 10%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -41,7 +43,7 @@ body {
 }
 
 .currentDate {
-    background-color: #dd7632;
+    background-color: #b18961;
     height: 7.5%;
     display: flex;
     justify-content: center;
@@ -49,7 +51,7 @@ body {
 }
 
 .currentDiet {
-    background-color: #b1eafe;
+    background-color: #DFDBD2;
     height: 82.5%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
