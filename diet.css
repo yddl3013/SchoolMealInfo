@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: 'RIDIBatang';
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+ 
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.wrapper {
+    background-color: wheat;
+    color: white;
+    width: 320px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.title {
+    background-color: #97d475;
+    height: 10%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentDate {
+    background-color: #dd7632;
+    height: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentDiet {
+    background-color: #b1eafe;
+    height: 82.5%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.diet {
+    margin: 5px;
+    color: black;
+}
