@@ -72,3 +72,4 @@ axios({
   });
 }   
 getAPI();
+

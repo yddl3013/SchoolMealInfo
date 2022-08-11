@@ -1,0 +1,22 @@
+{
+  "name": "p5",
+  "version": "1.0.0",
+  "description": "# 식단표 만들기 📰",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yddl3013/SchoolMealInfo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yddl3013/SchoolMealInfo/issues"
+  },
+  "homepage": "https://github.com/yddl3013/SchoolMealInfo#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
