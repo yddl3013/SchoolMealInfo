@@ -37,3 +37,4 @@ function insertDate() {
 };
 
 currentDate[0].textContent = insertDate();
+
