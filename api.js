@@ -21,9 +21,8 @@ function pushDate() {
     return `${apiYear}${apiMonth}${apiDate}`;
 };
 
-
+let diet;
 async function getAPI() {
-    let diet;
 axios({
     url: url, 
     method: 'get',
@@ -67,9 +66,7 @@ axios({
     
             // 부모 태그에 새로 만든 자식 태그를 넣음
             parentElement.append(mealInfoElement)
-        
     }
   });
 }   
 getAPI();
-
