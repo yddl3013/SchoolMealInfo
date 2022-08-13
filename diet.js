@@ -27,7 +27,7 @@ switch (getDay) {
     case 5:
         currentDay = '금'
         break;
-    case 3:
+    case 6:
         currentDay = '토'
         break;
 }
