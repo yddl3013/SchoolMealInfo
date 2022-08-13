@@ -3,7 +3,7 @@ let get = new Date();
 let currentDate = document.getElementsByClassName("currentDate");
 
 let getYear = get.getFullYear();
-let getMonth = get.getMonth();
+let getMonth = get.getMonth() + 1;
 let getDate = get.getDate();
 let getDay = get.getDay();
 let currentDay = '';
@@ -33,7 +33,7 @@ switch (getDay) {
 }
 
 function insertDate() {
-    return `${getYear}/${getMonth+1}/${getDate}/${currentDay}`
+    return `${getYear}/${getMonth}/${getDate}/${currentDay}`
 };
 
 currentDate[0].textContent = insertDate();

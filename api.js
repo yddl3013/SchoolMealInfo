@@ -11,7 +11,7 @@ function pushDate() {
     let apiDate = getDate;
 
     if (getMonth < 10) {
-       apiMonth = 0+String(getMonth+1);
+       apiMonth = 0+String(getMonth);
     };
 
     if (getDate < 10) {
