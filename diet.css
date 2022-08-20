@@ -32,6 +32,17 @@ body {
     border-radius: 16px;
 }
 
+.previousDate {
+    background-color: black;
+    width: 25px;
+    height: 20px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
 .title {
     background-color: #887972;
     height: 10%;
@@ -42,7 +53,18 @@ body {
     align-items: center;
 }
 
-.currentDate {
+.nextDate {
+    background-color: black;
+    width: 25px;
+    height: 20px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.dateTitle {
     background-color: #b18961;
     height: 7.5%;
     display: flex;
@@ -64,4 +86,12 @@ body {
 .diet {
     margin: 5px;
     color: black;
+}
+
+.previousDate {
+    background-color: #ba984a;
+}
+
+.nextDate {
+    background-color: #ba984a;
 }
