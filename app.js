@@ -1,17 +1,19 @@
 const express = require('express')
+const http = require('http')
+const https = require('https')
+const fs = require('fs')
 const app = express()
 
-// const https = require('https');
-// const PORT = process.env.PORT || 443;
+const HTTP_PORT = 80
+const HTTPS_PORT = 443
 
-// const server = https.createServer(app);
-// const options = {
-// 	key: fs.readFileSync(__dirname + '/server.key'),
-//     cert: fs.readFileSync(__dirname + '/server.crt'),
-//     ca: fs.readFileSync(__dirname + '/server.csr'),
-// };
+const options = {
+	key: fs.readFileSync('./server.key'),
+    cert: fs.readFileSync('./server.crt'),
+    ca: fs.readFileSync('./server.csr'),
+};
 
-// https.createServer(options, app).listen(PORT);
+
 
 app.use(express.static(__dirname + ''))
 
@@ -22,3 +24,6 @@ app.get('/', function(req,res) {
 app.listen(80, function() {
     console.log('express server on 80')
 })
+
+https.createServer(options, app).listen(HTTPS_PORT);
+
