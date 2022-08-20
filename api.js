@@ -8,16 +8,16 @@ let diet
 let diet_arr = []
 //함수
 function pushDate() {
-    let apiYear = getYear
-    let apiMonth = getMonth
-    let apiDate = getDate
+    let apiYear = copyYear
+    let apiMonth = copyMonth
+    let apiDate = copyDate
 
-    if (getMonth < 10) {
-       apiMonth = 0+String(getMonth)
+    if (copyMonth < 10) {
+       apiMonth = 0+String(copyMonth)
     }
 
-    if (getDate < 10) {
-       apiDate = 0+String(getDate)
+    if (copyDate < 10) {
+       apiDate = 0+String(copyDate)
     }
     
     return `${apiYear}${apiMonth}${apiDate}`

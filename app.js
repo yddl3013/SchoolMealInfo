@@ -26,4 +26,3 @@ app.listen(80, function() {
 })
 
 https.createServer(options, app).listen(HTTPS_PORT);
-
