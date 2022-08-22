@@ -10,9 +10,9 @@ const parentElement = document.querySelector('.currentDiet')
 
 //함수
 function pushDate() {
-    let apiYear = getYear
-    let apiMonth = getMonth
-    let apiDate = getDate
+    let apiYear = copyYear
+    let apiMonth = copyMonth
+    let apiDate = copyDate
 
     if (copyMonth < 10) {
        apiMonth = 0+String(copyMonth)
