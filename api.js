@@ -7,8 +7,6 @@ let diet_arr = []
 
 // childElement를 넣고싶은 부모 태그
 const parentElement = document.querySelector('.currentDiet')
-// 부모 태그에 넣을 자식 element를 생성 (div태그로)
-let mealInfoElement = document.createElement('div')
 
 //함수
 function pushDate() {
@@ -47,6 +45,9 @@ async function getAPI() {
             diet = dataSet.mealServiceDietInfo[1].row[0].DDISH_NM
             diet_arr = diet.split('<br/>')
             for (let i = 0; i < diet_arr.length; i++) { // 이 아래 과정을 급식의 개수만큼 반복    
+                // 부모 태그에 넣을 자식 element를 생성 (div태그로)
+                let mealInfoElement = document.createElement('div')
+
                 // 자식 태그에 diet라는 클래스를 공통으로 넣기 위해서 classList에 add함수를 이용해 diet를 넣음
                 mealInfoElement.classList.add('diet')
 
@@ -58,6 +59,9 @@ async function getAPI() {
             }
         } catch (error) {
             console.log("data not found err(식단 정보를 불러올 수 없습니다):: ", error)
+                // 부모 태그에 넣을 자식 element를 생성 (div태그로)
+                let mealInfoElement = document.createElement('div')
+                
                 // 자식 태그에 diet라는 클래스를 공통으로 넣기 위해서 classList에 add함수를 이용해 diet를 넣음
                 mealInfoElement.classList.add('diet')
 
