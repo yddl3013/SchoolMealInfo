@@ -19,11 +19,11 @@ let nextDate = document.getElementsByClassName('nextDate')
 
 
 //함수
-function getFullDate() {
+async function getFullDate() {
     return `${getYear}/${getMonth}/${getDate}/${getDay}`
 }
 
-function calculateDate() {
+async function calculateDate() {
     if (copyDate == 0) {
         copyMonth -= 1
         copyDate = new Date(copyYear, copyMonth, 0).getDate()
@@ -54,7 +54,7 @@ function calculateDate() {
     }
 }
 
-function calculateDay() {
+async function calculateDay() {
     if (copyDay == -1) {
         copyDay = 6
     }
@@ -87,11 +87,11 @@ function calculateDay() {
     return currentDay
 }
 
-function inputDate() {
+async function inputDate() {
     return `${copyYear}/${copyMonth}/${copyDate}/${calculateDay()}`
 }
 
-function calculatePreviousDate() {
+async function calculatePreviousDate() {
     copyDate -= 1
     copyDay -= 1
     calculateDate()
@@ -99,7 +99,7 @@ function calculatePreviousDate() {
     return inputDate()
 }
 
-function calculateNextDate() {
+async function calculateNextDate() {
     copyDate += 1
     copyDay += 1
     calculateDate()
