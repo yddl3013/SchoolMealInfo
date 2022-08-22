@@ -26,7 +26,7 @@ function pushDate() {
 };
 
 //api 요청
-function getAPI() {
+async function getAPI() {
     axios({
         url: url, 
         method: 'get',
