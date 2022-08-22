@@ -2,10 +2,19 @@
 const url = `https://open.neis.go.kr/hub/mealServiceDietInfo`
 const serviceKey = '111f48f0039644d087e84073ded0515d'
 
-// childElement를 넣고싶은 부모 태그
-const parentElement = document.querySelector('.currentDiet')
+let get = new Date()
+
+let getYear = get.getFullYear()
+let getMonth = get.getMonth() + 1
+let getDate = get.getDate()
+let getDay = get.getDay()
+
 let diet
 let diet_arr = []
+
+// childElement를 넣고싶은 부모 태그
+const parentElement = document.querySelector('.currentDiet')
+
 //함수
 function pushDate() {
     let apiYear = copyYear
@@ -49,7 +58,7 @@ async function getAPI() {
                 
                 // 자식 태그에 diet라는 클래스를 공통으로 넣기 위해서 classList에 add함수를 이용해 diet를 넣음
                 mealInfoElement.classList.add('diet')
-                
+
                 // 자식 태그에 텍스트를 넣기 위해 diet_arr[i]에 있는 String를 넣음
                 mealInfoElement.textContent = diet_arr[i] 
         

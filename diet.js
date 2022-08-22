@@ -1,11 +1,4 @@
 //전역변수
-let get = new Date()
-
-let getYear = get.getFullYear()
-let getMonth = get.getMonth() + 1
-let getDate = get.getDate()
-let getDay = get.getDay()
-
 let copyYear = getYear
 let copyMonth = getMonth
 let copyDate = getDate
@@ -23,7 +16,7 @@ function getFullDate() {
     return `${getYear}/${getMonth}/${getDate}/${getDay}`
 }
 
-async function calculateDate() {
+function calculateDate() {
     if (copyDate == 0) {
         copyMonth -= 1
         copyDate = new Date(copyYear, copyMonth, 0).getDate()
@@ -91,7 +84,7 @@ function inputDate() {
     return `${copyYear}/${copyMonth}/${copyDate}/${calculateDay()}`
 }
 
-async function calculatePreviousDate() {
+function calculatePreviousDate() {
     copyDate -= 1
     copyDay -= 1
     calculateDate()
@@ -99,7 +92,7 @@ async function calculatePreviousDate() {
     return inputDate()
 }
 
-async function calculateNextDate() {
+function calculateNextDate() {
     copyDate += 1
     copyDay += 1
     calculateDate()
@@ -107,7 +100,7 @@ async function calculateNextDate() {
     return inputDate()
 }
 
-async function removeChild() {
+function removeChild() {
     diet_arr = []
     while (parentElement.hasChildNodes()) {
         parentElement.removeChild(
