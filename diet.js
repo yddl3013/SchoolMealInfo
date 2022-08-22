@@ -54,7 +54,7 @@ async function calculateDate() {
     }
 }
 
-async function calculateDay() {
+function calculateDay() {
     if (copyDay == -1) {
         copyDay = 6
     }
