@@ -19,7 +19,7 @@ let nextDate = document.getElementsByClassName('nextDate')
 
 
 //함수
-async function getFullDate() {
+function getFullDate() {
     return `${getYear}/${getMonth}/${getDate}/${getDay}`
 }
 
@@ -87,7 +87,7 @@ async function calculateDay() {
     return currentDay
 }
 
-async function inputDate() {
+function inputDate() {
     return `${copyYear}/${copyMonth}/${copyDate}/${calculateDay()}`
 }
 
