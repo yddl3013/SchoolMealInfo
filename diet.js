@@ -1,4 +1,11 @@
 //전역변수
+let get = new Date()
+
+let getYear = get.getFullYear()
+let getMonth = get.getMonth() + 1
+let getDate = get.getDate()
+let getDay = get.getDay()
+
 let copyYear = getYear
 let copyMonth = getMonth
 let copyDate = getDate

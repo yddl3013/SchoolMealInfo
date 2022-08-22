@@ -2,13 +2,6 @@
 const url = `https://open.neis.go.kr/hub/mealServiceDietInfo`
 const serviceKey = '111f48f0039644d087e84073ded0515d'
 
-let get = new Date()
-
-let getYear = get.getFullYear()
-let getMonth = get.getMonth() + 1
-let getDate = get.getDate()
-let getDay = get.getDay()
-
 let diet
 let diet_arr = []
 
@@ -17,9 +10,9 @@ const parentElement = document.querySelector('.currentDiet')
 
 //함수
 function pushDate() {
-    let apiYear = copyYear
-    let apiMonth = copyMonth
-    let apiDate = copyDate
+    let apiYear = getYear
+    let apiMonth = getMonth
+    let apiDate = getDate
 
     if (copyMonth < 10) {
        apiMonth = 0+String(copyMonth)
