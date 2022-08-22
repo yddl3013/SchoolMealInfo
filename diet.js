@@ -95,7 +95,7 @@ function calculatePreviousDate() {
     copyDate -= 1
     copyDay -= 1
     calculateDate()
-    getAPI()
+    reqAPI()
     return inputDate()
 }
 
@@ -103,7 +103,7 @@ function calculateNextDate() {
     copyDate += 1
     copyDay += 1
     calculateDate()
-    getAPI()
+    reqAPI()
     return inputDate()
 }
 

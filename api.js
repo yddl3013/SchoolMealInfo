@@ -26,51 +26,54 @@ function pushDate() {
 };
 
 //api 요청
-async function getAPI() {
-    axios({
-        url: url, 
-        method: 'get',
-        params: {
-            Key: serviceKey,
-            Type: 'json',
-            pIndex: 1,
-            pSize: 9,
-            ATPT_OFCDC_SC_CODE: 'J10',
-            SD_SCHUL_CODE: '7531149',   
-            MLSV_YMD: pushDate()
-        }
-    }).then(function (res) {
-        const dataSet = res.data
-        try {
-            diet = dataSet.mealServiceDietInfo[1].row[0].DDISH_NM
-            diet_arr = diet.split('<br/>')
-            for (let i = 0; i < diet_arr.length; i++) { // 이 아래 과정을 급식의 개수만큼 반복    
-                // 부모 태그에 넣을 자식 element를 생성 (div태그로)
-                let mealInfoElement = document.createElement('div')
-
-                // 자식 태그에 diet라는 클래스를 공통으로 넣기 위해서 classList에 add함수를 이용해 diet를 넣음
-                mealInfoElement.classList.add('diet')
-
-                // 자식 태그에 텍스트를 넣기 위해 diet_arr[i]에 있는 String를 넣음
-                mealInfoElement.textContent = diet_arr[i] 
-        
-                // 부모 태그에 새로 만든 자식 태그를 넣음
-                parentElement.append(mealInfoElement)
+function reqAPI() {
+    async function getAPI() {
+        axios({
+            url: url, 
+            method: 'get',
+            params: {
+                Key: serviceKey,
+                Type: 'json',
+                pIndex: 1,
+                pSize: 9,
+                ATPT_OFCDC_SC_CODE: 'J10',
+                SD_SCHUL_CODE: '7531149',   
+                MLSV_YMD: pushDate()
             }
-        } catch (error) {
-            console.log("data not found err(식단 정보를 불러올 수 없습니다):: ", error)
-                // 부모 태그에 넣을 자식 element를 생성 (div태그로)
-                let mealInfoElement = document.createElement('div')
-                
-                // 자식 태그에 diet라는 클래스를 공통으로 넣기 위해서 classList에 add함수를 이용해 diet를 넣음
-                mealInfoElement.classList.add('diet')
-
-                // 자식 태그에 텍스트를 넣기 위해 diet_arr[i]에 있는 String를 넣음
-                mealInfoElement.textContent = "식단 정보가 없습니다." 
-                
-                // 부모 태그에 새로 만든 자식 태그를 넣음
-                parentElement.append(mealInfoElement)
-        }
-      });
+        }).then(function (res) {
+            const dataSet = res.data
+            try {
+                diet = dataSet.mealServiceDietInfo[1].row[0].DDISH_NM
+                diet_arr = diet.split('<br/>')
+                for (let i = 0; i < diet_arr.length; i++) { // 이 아래 과정을 급식의 개수만큼 반복    
+                    // 부모 태그에 넣을 자식 element를 생성 (div태그로)
+                    let mealInfoElement = document.createElement('div')
+    
+                    // 자식 태그에 diet라는 클래스를 공통으로 넣기 위해서 classList에 add함수를 이용해 diet를 넣음
+                    mealInfoElement.classList.add('diet')
+    
+                    // 자식 태그에 텍스트를 넣기 위해 diet_arr[i]에 있는 String를 넣음
+                    mealInfoElement.textContent = diet_arr[i] 
+            
+                    // 부모 태그에 새로 만든 자식 태그를 넣음
+                    parentElement.append(mealInfoElement)
+                }
+            } catch (error) {
+                console.log("data not found err(식단 정보를 불러올 수 없습니다):: ", error)
+                    // 부모 태그에 넣을 자식 element를 생성 (div태그로)
+                    let mealInfoElement = document.createElement('div')
+                    
+                    // 자식 태그에 diet라는 클래스를 공통으로 넣기 위해서 classList에 add함수를 이용해 diet를 넣음
+                    mealInfoElement.classList.add('diet')
+    
+                    // 자식 태그에 텍스트를 넣기 위해 diet_arr[i]에 있는 String를 넣음
+                    mealInfoElement.textContent = "식단 정보가 없습니다." 
+                    
+                    // 부모 태그에 새로 만든 자식 태그를 넣음
+                    parentElement.append(mealInfoElement)
+            }
+          });
     }
-getAPI() 
+    return getAPI()
+}
+reqAPI()
