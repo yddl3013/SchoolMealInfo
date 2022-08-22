@@ -26,7 +26,7 @@ function pushDate() {
 };
 
 //api 요청
-async function getAPI() {
+function getAPI() {
     axios({
         url: url, 
         method: 'get',
@@ -34,7 +34,7 @@ async function getAPI() {
             Key: serviceKey,
             Type: 'json',
             pIndex: 1,
-            pSize: 10,
+            pSize: 9,
             ATPT_OFCDC_SC_CODE: 'J10',
             SD_SCHUL_CODE: '7531149',   
             MLSV_YMD: pushDate()
@@ -42,7 +42,7 @@ async function getAPI() {
     }).then(function (res) {
         const dataSet = res.data
         try {
-            diet = res.data.mealServiceDietInfo[1].row[0].DDISH_NM
+            diet = dataSet.mealServiceDietInfo[1].row[0].DDISH_NM
             diet_arr = diet.split('<br/>')
             for (let i = 0; i < diet_arr.length; i++) { // 이 아래 과정을 급식의 개수만큼 반복
         
