@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content= "width=device-width, ,height=device-height, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, ,height=device-height, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./diet.css">
     <title>오늘의 식단</title>
+    <script src="https://kit.fontawesome.com/0e1d6fb480.js" crossorigin="anonymous"></script>
 </head>
 <script src="https://www.googletagmanager.com/gtag/js?id=G-3888SG74JL" async></script>
 <script src="track.js" async></script>
+
 <body>
     <div class="wrapper">
         <div class="title">
             오늘의 식단
         </div>
         <div class="dateTitle">
-            <div class="previousDate">◀️</div>
+            <div class="previousDate">
+                <i class="fa fa-play playReverse"></i>
+            </div>
             <div class="currentDate">
                 날짜
             </div>
-            <div class="nextDate">▶️</div>
+            <div class="nextDate">
+                <i class="fa fa-play"></i>
+            </div>
         </div>
         <div class="currentDiet">
         </div>
@@ -28,4 +35,5 @@
     <script src="./diet.js"></script>
     <script src="./api.js"></script>
 </body>
+
 </html>
